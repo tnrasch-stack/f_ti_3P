@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <string.h> 
+
+                                                      // Struct para agrupamento de variáveis
+struct Cidade {
+    char nome_cidade[50];                             // Delimitador de Buffer em 50
+    char estado_pertencente[30];                      // Buffer de 30 caracteres
+    int cod_carta;
+    int pop;
+    float pib;
+    float area;
+};
+
+int main() {
+
+    struct Cidade, cartaA, cartaB;
+    int opcao; 
+
+                                                    // Inserção de dados para CartaA
+    printf(" Primeira Carta a ser cadastrada: \n");
+    printf("Digite a Cidade: ");
+    scanf(" %s", cartaA.nome_cidade); 
+    printf("Digite o Estado: ");
+    scanf(" %s", cartaA.estado_pertencente); 
+    printf("Digite o Codigo da Carta: ");
+    scanf("%d", &cartaA.cod_carta);
+    printf("Digite a Populacao: ");
+    scanf("%d", &cartaA.pop);
+    printf("Digite o PIB: ");
+    scanf("%f", &cartaA.pib);
+    printf("Digite a Area: ");
+    scanf("%f", &cartaA.area);
+                                                    // Inserção de dados para CartaB
+    printf(" Segunda Carta a ser cadastrada: \n");
+    printf("Digite a Cidade: ");
+    scanf(" %s", cartaB.nome_cidade); 
+    printf("Digite o Estado: ");
+    scanf(" %s", cartaB.estado_pertencente); 
+    printf("Digite o Codigo da Carta: ");
+    scanf("%d", &cartaB.cod_carta);
+    printf("Digite a Populacao: ");
+    scanf("%d", &cartaB.pop);
+    printf("Digite o PIB: ");
+    scanf("%f", &cartaB.pib);
+    printf("Digite a Area: ");
+    scanf("%f", &cartaB.area);
+
+
+                                                                                // Após criação das cartas, vamos questionar o que será comparado e posteriormente compará-las e mostrar o resultado.
+                                                   // Questionando o que será comparado
+
+    printf("Qual item deseja comparar? \n");
+    printf("1 - Populacao \n");
+    printf("2 - PIB \n");
+    printf("3 - Area \n");
+    scanf ("%d", &opcao);
+
+                                                   // Após escolha da opção + comparação dos dados das cartas + resultado
+    if (opcao == 1) {
+        if (cartaA.pop > cartaB.pop) {
+            printf("%s (Carta 1) tem maior populacao que %s (Carta 2).\n", cartaA.nome_cidade, cartaB.nome_cidade);
+            printf("%s (Carta 1) , Vencedora!\n", cartaA.nome_cidade); 
+        }  else if (cartaB.pop > cartaA.pop) {
+            printf("%s (Carta 2) tem maior populacao que %s (Carta 1).\n", cartaB.nome_cidade, cartaA.nome_cidade);
+            printf("%s (Carta 2) , Vencedora!\n", cartaB.nome_cidade); 
+        } else {
+            printf("As cidades tem a mesma populacao. EMPATE \n");
+        }
+    } else if (opcao == 2) {
+        if (cartaA.pib > cartaB.pib) {
+            printf("%s (Carta 1) tem o PIB maior que %s (Carta 2).\n", cartaA.nome_cidade, cartaB.nome_cidade);
+            printf("%s (Carta 1) , Vencedora!\n", cartaA.nome_cidade); 
+        }  else if (cartaB.pib > cartaA.pib) {
+            printf("%s (Carta 2) tem o PIB maior que %s (Carta 1).\n", cartaB.nome_cidade, cartaA.nome_cidade);
+            printf("%s (Carta 2) , Vencedora!\n", cartaB.nome_cidade); 
+        } else {
+            printf("As cidades tem o mesmo PIB. EMPATE \n");
+        }
+    } else if (opcao == 3) {
+        if (cartaA.area > cartaB.area) {
+            printf("%s (Carta 1) tem maior area que %s (Carta 2).\n", cartaA.nome_cidade, cartaB.nome_cidade);
+            printf("%s (Carta 1) , Vencedora!\n", cartaA.nome_cidade); 
+        }  else if (cartaB.area > cartaA.area) {
+            printf("%s (Carta 2) tem maior area que %s (Carta 1).\n", cartaB.nome_cidade, cartaA.nome_cidade);
+            printf("%s (Carta 2) , Vencedora!\n", cartaB.nome_cidade); 
+        } else {
+            printf("As cidades tem a mesma área. EMPATE \n");
+        }
+    } else {
+        printf("Opcao invalida!\n");
+    }
+
+return 0;
+}
