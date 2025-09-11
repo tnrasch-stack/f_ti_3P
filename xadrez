@@ -1,30 +1,27 @@
-//Estamos a criar um jogo de Xadrez com 3 peças que movem-se de maneira específica no tabuleiro.
-// As 3 peças são:- BISPO: que se move para a diagnoal superior direita.
+//Estamos a criar um jogo de Xadrez com 4 peças que movem-se de maneira específica no tabuleiro.
+// As 4 peças são:- BISPO: que se move para a diagnoal superior direita.
 //                - TORRE: que se move no eixo x para direita.
 //                - RAINHA: que se move para qualquer direção, mas nesse caso 8 casas à esquerda.
+//                - CAVALO: que se move no eixo y e x para esquerda e abaixo.
 
 #include <stdio.h>
 #include <string.h>
-
 int main() {
   char opcao;
   printf("Bem Vindo ao Xadrez da MateCheck\n");
 
-  while (1) {                                                   // Menu em loop até que seja desejado encerrrar'
-    printf("Qual peça deseja mover? [B]ispo [T]orre ou [R]ainha? [S]air\n");
-                                                                // Limpa variável de entrada
-    while (getchar() != '\n');
-    scanf(" %c", &opcao);
-                                                                // Condicionantes, quando uma condição for atendida a linha de código interna será executada
-    if (opcao == 'B' || opcao == 'b') {
+  while (1) {                                                   // Menu em loop até que seja encerrado'
+    printf("Qual peça deseja mover? [B]ispo [T]orre [R]ainha [C]avalo ou [S]air\n");
+    scanf(" %c", &opcao);                                
+    if (opcao == 'B' || opcao == 'b') {                         // Condicionantes, quando uma condição for atendida a linha de código interna será executada
         printf("Movendo Bispo\n");
         for (int i = 0; i < 5; i++)                             // se opção "B"
         {
-            printf("Cima Direita\n");          
+            printf("Acima Direita\n");
         }
     } else if (opcao == 'T' || opcao == 't') {
         printf("Movendo Torre.\n");
-        for (int i = 0; i < 5; i++)                              // se opção "T" 
+        for (int i = 0; i < 5; i++)                              // se opção "T"
         {
             printf("Direita\n");
         }
@@ -34,12 +31,23 @@ int main() {
         {
             printf("Esquerda\n");
         }
+    } else if (opcao == 'C' || opcao == 'c') {
+        printf("Movendo Cavalo\n");
+        for (int i = 0; i != 2; i++)                             // Início do aninhamento FOR + WHILE; Instrução FOR direcionando para baixo
+        {
+            printf("Abaixo\n");
+        }
+        int j = 0;
+        while (j < 1) {                                          // Quando o FOR for encerrado inciia o WHILE
+            printf("Esquerda\n");
+            j++;
+        }
     } else if (opcao == 'S' || opcao == 's')                     // se opção "S"
     {
         printf("Até logo!\n");
-        break;                                                   // Encerra o lastro de repetição
+        break;                                                   // Encerra o lastro de repetição -- Pressionado sair --
     } else {
-        printf("Opção Inválida\n");                              // Condição de erro/entrada inválida 
+        printf("Opção Inválida\n");                              // Condição de erro/entrada inválida
     }
   }
 
