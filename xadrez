@@ -20,7 +20,7 @@ int main() {
         printf("Movendo Bispo\n");
         for (int i = 0; i < 5; i++)                             // se opção "B"
         {
-            printf("Diagonal Superior Direita\n");          
+            printf("Cima Direita\n");          
         }
     } else if (opcao == 'T' || opcao == 't') {
         printf("Movendo Torre.\n");
