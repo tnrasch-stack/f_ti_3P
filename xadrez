@@ -1,0 +1,46 @@
+//Estamos a criar um jogo de Xadrez com 3 peças que movem-se de maneira específica no tabuleiro.
+// As 3 peças são:- BISPO: que se move para a diagnoal superior direita.
+//                - TORRE: que se move no eixo x para direita.
+//                - RAINHA: que se move para qualquer direção, mas nesse caso 8 casas à esquerda.
+
+#include <stdio.h>
+
+int main() {
+  char opcao;
+  printf("Bem Vindo ao Xadrez da MateCheck\n");
+
+  while (1) {                                                   // Menu em loop até que seja desejado encerrrar'
+    printf("Qual peça deseja mover? [B]ispo [T]orre ou [R]ainha? [S]air\n");
+                                                                // Limpa variável de entrada
+    while (getchar() != '\n');
+    scanf(" %c", &opcao);
+                                                                // Condicionantes, quando uma condição for atendida a linha de código interna será executada
+    if (opcao == 'B' || opcao == 'b') {
+        printf("Movendo Bispo\n");
+        for (int i = 0; i < 5; i++)                             // se opção "B"
+        {
+            printf("Diagonal Superior Direita\n");          
+        }
+    } else if (opcao == 'T' || opcao == 't') {
+        printf("Movendo Torre.\n");
+        for (int i = 0; i < 5; i++)                              // se opção "T" 
+        {
+            printf("Direita\n");
+        }
+    } else if (opcao == 'R' || opcao == 'r') {
+        printf("Movendo Rainha\n");
+        for (int i = 0; i < 8; i++)                              // se opção "R"
+        {
+            printf("Esquerda\n");
+        }
+    } else if (opcao == 'S' || opcao == 's')                     // se opção "S"
+    {
+        printf("Até logo!\n");
+        break;                                                   // Encerra o lastro de repetição
+    } else {
+        printf("Opção Inválida\n");                              // Condição de erro/entrada inválida 
+    }
+  }
+
+  return 0;
+}
