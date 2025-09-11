@@ -4,6 +4,7 @@
 //                - RAINHA: que se move para qualquer direção, mas nesse caso 8 casas à esquerda.
 
 #include <stdio.h>
+#include <string.h>
 
 int main() {
   char opcao;
