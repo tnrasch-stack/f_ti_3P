@@ -46,7 +46,7 @@ int main() {
     scanf("%f", &cartaB.area);
 
 
-                                                                                // Após criação das cartas, vamos questionar o que será comparado e posteriormente compará-las e mostrar o resultado.
+                                                   // Após criação das cartas, vamos questionar o que será comparado e posteriormente compará-las e mostrar o resultado.
                                                    // Questionando o que será comparado
 
     printf("Qual item deseja comparar? \n");
