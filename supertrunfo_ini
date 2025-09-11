@@ -24,11 +24,11 @@ int main() {
     scanf(" %s", cartaA.estado_pertencente); 
     printf("Digite o Codigo da Carta: ");
     scanf("%d", &cartaA.cod_carta);
-    printf("Digite a Populacao: ");
+    printf("Digite a População: ");
     scanf("%d", &cartaA.pop);
     printf("Digite o PIB: ");
     scanf("%f", &cartaA.pib);
-    printf("Digite a Area: ");
+    printf("Digite a Área: ");
     scanf("%f", &cartaA.area);
                                                     // Inserção de dados para CartaB
     printf(" Segunda Carta a ser cadastrada: \n");
@@ -38,11 +38,11 @@ int main() {
     scanf(" %s", cartaB.estado_pertencente); 
     printf("Digite o Codigo da Carta: ");
     scanf("%d", &cartaB.cod_carta);
-    printf("Digite a Populacao: ");
+    printf("Digite a População: ");
     scanf("%d", &cartaB.pop);
     printf("Digite o PIB: ");
     scanf("%f", &cartaB.pib);
-    printf("Digite a Area: ");
+    printf("Digite a Área: ");
     scanf("%f", &cartaB.area);
 
 
@@ -50,12 +50,12 @@ int main() {
                                                    // Questionando o que será comparado
 
     printf("Qual item deseja comparar? \n");
-    printf("1 - Populacao \n");
+    printf("1 - População \n");
     printf("2 - PIB \n");
-    printf("3 - Area \n");
-    scanf ("%d", &opcao);
+    printf("3 - Área \n");
+    scanf ("%d", &opcao);                          //A entrada é atribuída a variável opcao e segue para comparação.
 
-                                                   // Após escolha da opção + comparação dos dados das cartas + resultado
+                                                   // Após escolha da opção + comparação dos dados das cartas + resultado com condicionantes, SE..ENTÃO)
     if (opcao == 1) {
         if (cartaA.pop > cartaB.pop) {
             printf("%s (Carta 1) tem maior populacao que %s (Carta 2).\n", cartaA.nome_cidade, cartaB.nome_cidade);
